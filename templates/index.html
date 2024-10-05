@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Resignation Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        form {
+            max-width: 300px;
+            width: 100%;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.85em;
+        }
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 0.85em;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s;
+        }
+        input[type="number"]:focus,
+        input[type="text"]:focus {
+            background-color: #e2e6ea;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <form action="/prediction" method="POST">
+        <label>Years in Company:</label>
+        <input type="number" name="years_spent" required>
+        
+        <label>Satisfaction Level:</label>
+        <input type="text" name="satisfaction_level" required>
+        
+        <label>Average Monthly Hours:</label>
+        <input type="number" name="average_monthly_hours" required>
+        
+        <label>Number of Projects:</label>
+        <input type="number" name="number_project" required>
+        
+        <label>Last Evaluation:</label>
+        <input type="text" name="last_evaluation" required>
+        
+        <label>Technical Role? (yes/no):</label>
+        <select required name="technical">
+            <option value="1" selected>Yes</option>
+            <option value="0">No</option>
+        </select>
+        
+        <label>In Sales? (yes/no):</label>
+        <select required name="sales">
+            <option value="1" selected>Yes</option>
+            <option value="0">No</option>
+        </select>
+        
+        <label>In Management? (yes/no):</label>
+        <select required name="management">
+            <option value="1" selected>Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label>Promoted in Last 5 Years? (yes/no):</label>
+        <select required name="promo">
+            <option value="1" selected>Yes</option>
+            <option value="0">No</option>
+        </select>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
