@@ -17,10 +17,3 @@ Before running this application, ensure you have the following:
 - Pandas (for data manipulation)
 - Joblib (for loading the pre-trained model)
 
-## Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/employee-resignation-prediction.git
-   cd employee-resignation-prediction
